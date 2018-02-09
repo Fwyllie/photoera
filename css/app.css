@@ -1,14 +1,46 @@
 .hidden{
   display: none;
 }
-
+.title-bar{
+	background-color: #192a31;
+	margin-bottom:10px;
+	padding-right: 0px;
+}
+.title-bar .menu-icon{
+	margin-right: 15px;
+  margin-top: 10px;
+}
+#mainNav{
+	list-style:none;
+	text-align:center;
+  margin: 40px auto;
+}
+#mainNav li a{
+	display:block;
+	padding: 5px 0 5px;
+	color: #dbdad5;
+}
+#mainNav li a:hover{
+  color: #192a31;
+	background-color: #efefef;
+}
+#mainNav li{
+	border-bottom: 1px solid #efefef;
+}
+#mainNav li :first-child{
+	border-top: 1px solid #efefef;
+}
+#mainNav li:last-child{
+	margin-bottom: 10px;
+}
 #intro{
   background-image: url("../images/mainbckgrd-med.jpg");
   height: 100vh;
   text-align: center;
+  padding-top: 50px;
 }
 #introMessage{
-  margin: 50px auto;
+  margin: 0 auto;
   border: 5px solid white;
   font-family: 'Exo', sans-serif;
   height: 80px;
@@ -21,7 +53,7 @@
 #intro ul{
   list-style-type: none;
   text-align: left;
-  margin-bottom:140px;
+  margin-top:140px;
 }
 #intro ul li{
   margin-top: 5px;
@@ -52,35 +84,11 @@
   border: 5px solid white;
   font-family: 'Exo', sans-serif;
   padding: 10px;
-  margin-top: 10px;
-  margin-left: 10px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
   font-size: 0.9em;
   color: white;
-}
-#introServices ul{
-  list-style-type: none;
-  text-align: right;
-}
-#introServices ul li{
-  margin-top: 5px;
-}
-#introServices ul li a{
-  color: white;
-  font-size: 1em;
-  font-family: 'Raleway', sans-serif;
-}
-#introServices ul li a::after{
-  content: '';
-  display: block;
-  margin-top: 10px;
-  height: 2px;
-  width: 0px;
-  background: transparent;
-  transition: width .5s ease, background-color .5s ease;
-}
-#introServices ul li a:hover::after{
-  width: 30%;
-  background: #000;
 }
 #ourServices, #about{
   color: white;
@@ -103,9 +111,13 @@
   font-size: 1.2em;
   font-weight: bold;
 }
-
-#introWork, #introAbout{
+#introWork{
   background-color: #192a31;
+  color: white;
+}
+#introAbout{
+  background-color: #192a31;
+  height: 100vh;
   color: white;
 }
 #mainWorks{
@@ -122,13 +134,15 @@
 }
 .workExample{
   overflow: hidden;
-  max-height: 200px;
+  max-height: 300px;
   height: 100%;
   padding: 5px;
+  width: 49%;
 }
-
 .mainForm{
-  margin-top: 20px;
+  margin: 20px auto;
+  max-width: 90%;
+  text-align: center;
 }
 #submit{
   background-color: #192a31;
@@ -138,9 +152,76 @@
 #submit:hover{
   background-color: #658699;
 }
+#about, #ourServices, #mainWorks, #servicesList{
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
 @media screen and (min-width: 40em) {
   #intro{
     background-image: url("../images/mainbckgrd-lrg.jpg");
+  }
+  #introMessage{
+    padding: 0;
+  }
+  #intro ul{
+    margin-top: 260px;
+  }
+  #about, #ourServices{
+    padding: 50px;
+  }
+  textarea, input{
+    width: 66% !important;
+    margin: 20px auto !important;
+  }
+
+}
+@media screen and (min-width:64em) {
+  #intro ul{
+  text-align: center;
+  }
+  #intro ul li a::after{
+    margin: auto;
+  }
+  #intro ul li a:hover::after{
+    width: 10%;
+  }
+  #mainNav{
+  	text-align:right;
+    margin: 0px auto;
+    border-bottom: 2px solid white;
+  }
+  #mainNav li a{
+  	display:inline-block;
+  	padding: 5px 0 5px;
+  	color: #dbdad5;
+  }
+  #mainNav li a:hover{
+    color: #658699;
+    background-color: #192b31;
+  }
+  #mainNav li{
+  	border-bottom: 0px;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 30px;
+  }
+  #mainNav li :first-child{
+  	border-top: 0;
+  }
+  #mainNav li:last-child{
+  	margin-bottom: 0px;
+  }
+  .workExample{
+    width: 33%;
+  }
+  #servicesList{
+    padding: 50px;
+  }
+  textarea, input{
+    width: 40% !important;
+  }
+  #ourServices{
+    text-align: center;
   }
 }

@@ -12,26 +12,35 @@
   </head>
   <body>
     <section id="introWork" class="grid-x">
+      <nav class="large-6 large-offset-6 cell">
+        	<h2 class="hide">Main Navigation</h2>
+            <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="large">
+            	<button class="menu-icon float-right" type="button" data-toggle></button>
+            </div>
+            <div id="main-menu">
+            	<ul id="mainNav">
+                	<li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+      </nav>
       <div class="small-4 cell">
         <a href="index.html">
           <h1 id="introMessageServices">photoera</h1>
         </a>
       </div>
-      <!-- <ul class="cell">
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="work.html">Work</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul> -->
       <div id="ourServices">
         <h2>Contact</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis felis pharetra, sagittis nunc id, feugiat nuncfeugiat nunc.</p>
       </div>
     </section>
     <form class="mainForm align-center grid-x">
-      <input class="small-10 cell" type="text" placeholder="Your Name:">
-      <input class="small-10 cell" type="email" placeholder="Your Email:">
-      <textarea class="small-10 cell" placeholder="Your Message:" rows="6"></textarea>
+      <input class="large-4 cell" type="text" placeholder="Your Name:">
+      <input class="cell" type="email" placeholder="Your Email:">
+      <textarea class="cell" placeholder="Your Message:" rows="5"></textarea>
       <button class="small-4 cell" id="submit" type="submit">Send</button>
     </form>
     <script src="js/vendor/jquery.js"></script>
